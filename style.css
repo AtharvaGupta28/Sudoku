@@ -1,0 +1,50 @@
+.puzzle{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+.table_elements{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type="number"]{
+    font-size: 30px;
+    width: 100px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color:white;
+}
+h2{
+    text-align: center;
+    color:white;
+}
+body{
+    background-color: black;
+}
+button {
+    margin-top: auto;
+    color: #FFF;
+    margin: 0;
+    background-color: #208376;
+    border: 2px solid rgba(255, 255, 255, 0);
+    position: relative;
+    border-radius: 0px;
+    padding: 1.5em 3em;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-left: 1em;
+}
+button:hover,
+button:active {
+    border: 2px solid rgb(255, 255, 255);
+}
