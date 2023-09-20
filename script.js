@@ -6,7 +6,7 @@ mat[15]=2;
 var button=document.getElementById('check');
 var result=document.querySelector('.result h2');
 
-start();
+
 function start(){
     // result=document.querySelector('.result h2');
     // button=document.getElementById('check');
@@ -18,11 +18,13 @@ function start(){
 }
 function process(event){
     //button=document.getElementById('check');
-    
+    if(document.getElementById("mat[0][1]").value == ""){
+        alert("empty");
+    }
     mat[1]=document.getElementById("mat[0][1]").value;
     mat[2]=document.getElementById("mat[0][2]").value;
     mat[3]=document.getElementById("mat[0][3]").value;
-
+    
     mat[4]=document.getElementById("mat[1][0]").value;
     mat[5]=document.getElementById("mat[1][1]").value;
     mat[7]=document.getElementById("mat[1][3]").value;
@@ -55,5 +57,21 @@ function process(event){
     button.textContent="Play Again";
     button.removeEventListener("click",process);
     button.addEventListener("click",start);
+    document.getElementById("mat[0][1]").value="";
+    document.getElementById("mat[0][2]").value="";
+    document.getElementById("mat[0][3]").value="";
+
+    document.getElementById("mat[1][0]").value="";
+    document.getElementById("mat[1][1]").value="";
+    document.getElementById("mat[1][3]").value="";
+
+    document.getElementById("mat[2][0]").value="";
+    document.getElementById("mat[2][2]").value="";
+    document.getElementById("mat[2][3]").value="";
+
+    document.getElementById("mat[3][0]").value="";
+    document.getElementById("mat[3][1]").value="";
+    document.getElementById("mat[3][2]").value="";
     // button.addEventListener("click",start);
 }
+start();
