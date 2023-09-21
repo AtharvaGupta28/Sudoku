@@ -3,6 +3,21 @@ mat[0]=4;
 mat[6]=1;
 mat[9]=3;
 mat[15]=2;
+mat1=document.getElementById("mat[0][1]");
+mat2=document.getElementById("mat[0][2]");
+mat3=document.getElementById("mat[0][3]");
+mat4=document.getElementById("mat[1][0]");
+mat5=document.getElementById("mat[1][1]");
+mat7=document.getElementById("mat[1][3]");
+
+mat8=document.getElementById("mat[2][0]");
+mat10=document.getElementById("mat[2][2]");
+mat11=document.getElementById("mat[2][3]");
+
+mat12=document.getElementById("mat[3][0]");
+mat13=document.getElementById("mat[3][1]");
+mat14=document.getElementById("mat[3][2]");
+
 var button=document.getElementById('check');
 var result=document.querySelector('.result h2');
 
@@ -17,28 +32,30 @@ function start(){
     
 }
 function process(event){
-    //button=document.getElementById('check');
-    if(document.getElementById("mat[0][1]").value == ""){
-        alert("empty");
-    }
-    mat[1]=document.getElementById("mat[0][1]").value;
-    mat[2]=document.getElementById("mat[0][2]").value;
-    mat[3]=document.getElementById("mat[0][3]").value;
+    mat[1]=mat1.value;
+    mat[2]=mat2.value;
+    mat[3]=mat3.value;
     
-    mat[4]=document.getElementById("mat[1][0]").value;
-    mat[5]=document.getElementById("mat[1][1]").value;
-    mat[7]=document.getElementById("mat[1][3]").value;
+    mat[4]=mat4.value;
+    mat[5]=mat5.value;
+    mat[7]=mat7.value;
 
-    mat[8]=document.getElementById("mat[2][0]").value;
-    mat[10]=document.getElementById("mat[2][2]").value;
-    mat[11]=document.getElementById("mat[2][3]").value;
+    mat[8]=mat8.value;
+    mat[10]=mat10.value;
+    mat[11]=mat11.value;
 
-    mat[12]=document.getElementById("mat[3][0]").value;
-    mat[13]=document.getElementById("mat[3][1]").value;
-    mat[14]=document.getElementById("mat[3][2]").value;
-    //result=document.querySelector('.result h2');
+    mat[12]=mat12.value;
+    mat[13]=mat13.value;
+    mat[14]=mat14.value;
+    for(i=0;i<16;i++){
+        if(mat[i]==""){
+            alert("Please complete the table.");
+            cap=false;
+            break;
+        }
+    }
     result.style.display="inline-block";
-
+    
     let check=true;
     let answers=[4,1,2,3,3,2,1,4,2,3,4,1,1,4,3,2];
     for(i=0;i<16;i++){
