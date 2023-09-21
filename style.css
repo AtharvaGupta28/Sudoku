@@ -7,8 +7,6 @@
     font-size: 30px;
     color: white;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 input[type="number"]{
     font-size: 30px;
@@ -28,11 +26,21 @@ h2{
 body{
     background-color: black;
 }
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+    
+}
+td:hover{
+    background-color: blueviolet;
+}
 button {
     margin-top: auto;
     color: #FFF;
     margin: 0;
     background-color:chocolate;
+    
     border: 2px solid rgba(255, 255, 255, 0);
     position: relative;
     border-radius: 0px;
