@@ -5,32 +5,52 @@
 }
 .table_elements{
     font-size: 30px;
-    color: white;
+    color: black;
     text-align: center;
 }
 input[type="number"]{
     font-size: 30px;
     width: 100px;
-    color: white;
-    background-color: black;
+    color:black;
+    background-color: darkgreen;
     text-align: center;
 }
 h1{
     text-align: center;
-    color:white;
+    color:black;
+    text-decoration: underline wavy;
+    text-decoration-color: red;
 }
 h2{
     text-align: center;
-    color:white;
+    color:black;
 }
 body{
     background-color: black;
+    background-image: url("Images/numbers.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
 }
 table{
+    border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid;
+    border-bottom: 10px solid;
+    border-top: 10px solid;
+    border-left: 10px solid;
+    border-right: 10px solid;
+    border-color: crimson;
+}
+table tr:nth-child(2n){
+    border-bottom: 10px solid;
+    border-color: crimson;
     
+}
+.col2{
+    border-right: 10px solid;
+    border-color: crimson;
 }
 td:hover{
     background-color: blueviolet;
