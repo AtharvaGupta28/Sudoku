@@ -1,7 +1,25 @@
-.puzzle{
-    margin: auto;
-    width: 50%;
+body{
+    background-color: black;
+    background-image: url("Images/numbers.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-flow:column nowrap;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+}
+.first{
     text-align: center;
+    color:black;
+    text-decoration: underline wavy;
+    text-decoration-color: red;
+}
+.second{
+    text-align: center;
+    color:black;
 }
 .table_elements{
     font-size: 30px;
@@ -15,28 +33,9 @@ input[type="number"]{
     background-color: darkgreen;
     text-align: center;
 }
-h1{
-    text-align: center;
-    color:black;
-    text-decoration: underline wavy;
-    text-decoration-color: red;
-}
-h2{
-    text-align: center;
-    color:black;
-}
-body{
-    background-color: black;
-    background-image: url("Images/numbers.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
 
-}
 table{
     border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
     border-bottom: 10px solid;
     border-top: 10px solid;
     border-left: 10px solid;
@@ -56,13 +55,11 @@ td:hover{
     background-color: blueviolet;
 }
 button {
-    margin-top: auto;
     color: #FFF;
     margin: 0;
     background-color:chocolate;
     
     border: 2px solid rgba(255, 255, 255, 0);
-    position: relative;
     border-radius: 0px;
     padding: 1.5em 3em;
     display: inline-block;
