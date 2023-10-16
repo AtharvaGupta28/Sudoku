@@ -1,0 +1,75 @@
+body{
+    background-color: black;
+    background-image: url("../images/numbers.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-flow:column nowrap;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+}
+.first{
+    text-align: center;
+    color:black;
+    text-decoration: underline wavy;
+    text-decoration-color: red;
+}
+.second{
+    text-align: center;
+    color:black;
+}
+.table_elements{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+input[type="number"]{
+    font-size: 30px;
+    width: 100px;
+    color:black;
+    background-color: darkgreen;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+    border-bottom: 10px solid;
+    border-top: 10px solid;
+    border-left: 10px solid;
+    border-right: 10px solid;
+    border-color: crimson;
+}
+table tr:nth-child(2n){
+    border-bottom: 10px solid;
+    border-color: crimson;
+    
+}
+.col2{
+    border-right: 10px solid;
+    border-color: crimson;
+}
+td:hover{
+    background-color: blueviolet;
+}
+button {
+    color: #FFF;
+    margin: 0;
+    background-color:chocolate;
+    
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 0px;
+    padding: 1.5em 3em;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-left: 1em;
+}
+button:hover,
+button:active {
+    border: 2px solid rgb(255, 255, 255);
+}

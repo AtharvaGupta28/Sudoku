@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "sudoku",
   "version": "1.0.0",
   "description": "First project in web development, will keep updating as I keep learning",
@@ -9,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.5.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
     "express": "^4.18.2"
   }
 }
