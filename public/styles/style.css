@@ -10,6 +10,12 @@ body{
     height: 100%;
     align-items: center;
     gap: 10px;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .first{
     text-align: center;
@@ -21,55 +27,39 @@ body{
     text-align: center;
     color:black;
 }
+.third{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(9,1fr);
+    height: max-content;
+    width: 90%;
+    gap: 5px;
+}
 .table_elements{
-    font-size: 30px;
-    color: black;
+    background-color: blue;
     text-align: center;
+    font-size: 2rem;
+    height: 40px;
+}
+.correct_table_elements{
+    background-color: green;
+    text-align: center;
+    font-size: 2rem;
+    height: 40px;
+}
+.wrong_table_elements{
+    background-color: red;
+    text-align: center;
+    font-size: 2rem;
+    height: 40px;
 }
 input[type="number"]{
     font-size: 30px;
-    width: 100px;
+    width: min-content;
     color:black;
     background-color: darkgreen;
     text-align: center;
 }
-
-table{
-    border-collapse: collapse;
-    border-bottom: 10px solid;
-    border-top: 10px solid;
-    border-left: 10px solid;
-    border-right: 10px solid;
-    border-color: crimson;
-}
-table tr:nth-child(2n){
-    border-bottom: 10px solid;
-    border-color: crimson;
-    
-}
-.col2{
-    border-right: 10px solid;
-    border-color: crimson;
-}
-td:hover{
-    background-color: blueviolet;
-}
-button {
-    color: #FFF;
-    margin: 0;
-    background-color:chocolate;
-    
-    border: 2px solid rgba(255, 255, 255, 0);
-    border-radius: 0px;
-    padding: 1.5em 3em;
-    display: inline-block;
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 1em;
-    letter-spacing: 1px;
-    cursor: pointer;
-    margin-left: 1em;
-}
-button:hover,
-button:active {
-    border: 2px solid rgb(255, 255, 255);
+.fifth{
+    margin-top: 20px;
 }

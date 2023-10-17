@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Sudoku</title>
-        <script src="script.js" defer></script>
         <link rel="stylesheet" href="styles/style.css">
 
     </head>
@@ -12,44 +11,73 @@
         </div>
         <div class="second">
             <h2 id="mid">Enter the missing numbers to complete the 4x4 Sudoku</h2>
-        </div>    
-        <div class="third">
-            <table border="" class="table_elements">
-                <tr>
-                    
-                        <td>4</td>
-                        <td class="col2"><input type="number" id="mat[0][1]" min="1" max="4"></td>
-                        <td><input type="number" id="mat[0][2]" min="1" max="4"></td>
-                        <td><input type="number" id="mat[0][3]" min="1" max="4"></span></id></td>
-                        
-
-                </tr>
-                <tr >
-                    <td><input type="number" id="mat[1][0]" min="1" max="4"></td>
-                    <td class="col2"><input type="number" id="mat[1][1]" min="1" max="4"></td>
-                    <td>1</td>
-                    <td><input type="number" id="mat[1][3]" min="1" max="4"</td>
-                </tr>
-                <tr> 
-                    <td><input type="number" id="mat[2][0]" min="1" max="4"></td>
-                    <td class="col2">3</td>
-                    <td><input type="number" id="mat[2][2]" min="1" max="4"></td>
-                    <td><input type="number" id="mat[2][3]" min="1" max="4"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="mat[3][0]" min="1" max="4"></td>
-                    <td class="col2"><input type="number" id="mat[3][1]" min="1" max="4"></td>
-                    <td><input type="number" id="mat[3][2]" min="1" max="4"></td>
-                    <td>2</td>
-                </tr>
-            </table>
-        </div>           
-        <div class="fourth">
-            <div class="result">
-                <h2></h2>
-            </div>
-        </div class="fifth">
-            <button id="check" type="button"></button>
         </div>
+        <form method="post" action="/submit">
+        <div class="third">
+            <% if(locals.grid && !locals.answer){ %>
+                <% var count=0;console.log("Question was called"); %>
+                <% for(var i=0;i<9;i++){ %>
+                   <% for(var j=0;j<9;j++){ %>
+                        <% var value=grid.value[i][j] %>
+                        <%if(value!=0){ %>
+                            <div class="table_elements">
+                                <%= value %>
+                            </div>
+                        <% }else{ %>
+                            <div class="table_elements">
+                                <input type="number" name="<%=count %>" min="1" max="9">
+                            </div>
+                            <% count++; %>
+                        <% } %>
+                    <% } %>
+                <% } %>
+           <% }else if(locals.answer){ %>
+                <% var count=0, flip=true; %>
+                <% for(var i=0;i<9;i++){ %>
+                    <% for(var j=0;j<9;j++){ %>
+                        <% var value=grid.solution[i][j] %>
+                        <%if(grid.value[i][j]!=0){ %>
+                            <div class="table_elements">
+                                <%=value %>
+                            </div>
+                        <% }else{ %>
+                            <% if(answer[`${count}`]!=value){ flip=false;%>
+                                <div class="wrong_table_elements">
+                                    <%=value %>
+                                </div>
+                            <% }else{ %>
+                                <div class="correct_table_elements">
+                                    <%=value %>
+                                </div>
+                            <% } %>
+                            <% count++; %>
+                        <% } %>
+                    <% } %>
+                <% } %>
+                <% if(flip){ %>
+                    <script>alert("Correct Answer");</script>
+                <% }else{ %>
+                    <script>alert("Incorrect Answer");</script>
+                <% } %>
+                <script src="script.js"></script>
+           <% } %>
+            
+        </div>
+        
+        <% if(display){ %>
+            <div class="fifth">
+                <input id="check" type="submit" value="CHECK">
+            </div>
+            
+        </form> 
+        <% }else{ %>  
+            
+        </form>         
+            <div class="fourth">
+                <form action="/" method="get">
+                    <input id="check" type="submit" value="Re-Try">
+                </form>
+            </div>
+            <% } %>
     </body>
 </html>
