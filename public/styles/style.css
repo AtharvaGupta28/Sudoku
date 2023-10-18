@@ -32,32 +32,35 @@ form{
     grid-template-columns: repeat(9,1fr);
     grid-template-rows: repeat(9,1fr);
     height: max-content;
-    width: 90%;
+    width: 100%;
     gap: 5px;
 }
 .table_elements{
     background-color: blue;
     text-align: center;
     font-size: 2rem;
+    width: 100px;
     height: 40px;
 }
 .correct_table_elements{
     background-color: green;
     text-align: center;
     font-size: 2rem;
+    width: 100px;
     height: 40px;
 }
 .wrong_table_elements{
     background-color: red;
     text-align: center;
     font-size: 2rem;
+    width: 100px;
     height: 40px;
 }
 input[type="number"]{
     font-size: 30px;
     width: min-content;
     color:black;
-    background-color: darkgreen;
+    background-color :saddlebrown;
     text-align: center;
 }
 .fifth{

@@ -13,7 +13,7 @@ app.get("/",async (req,res)=>{
     try{
         const response=await axios.get("https://sudoku-api.vercel.app/api/dosuku");
         result=response.data;
-        console.log(result.newboard.grids[0].solution);
+        console.log("Solution   "+result.newboard.grids[0].solution);
         res.render("index.ejs",{grid: result.newboard.grids[0], display : true});
     }
     catch(error){
@@ -22,8 +22,8 @@ app.get("/",async (req,res)=>{
     //res.render("index.ejs");
 });
 app.post("/submit",(req,res)=>{
-    console.log("Answer sent");
-    console.log(req.body);
+    //console.log("Answer sent");
+    //console.log(req.body);
     res.render("index.ejs",{answer : req.body, grid:result.newboard.grids[0], display: false});
 });
 app.listen(port,()=>{
