@@ -1,16 +1,12 @@
 body{
-    background-color: black;
-    background-image: url("../images/numbers.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-
+    background-image: linear-gradient(45deg,rgb(14, 83, 88),rgba(249, 76, 16,0.5));
+    /* transform: skewX(20deg); */
     display: flex;
     flex-flow:column nowrap;
-    height: 100%;
+    height: 110vh;
     align-items: center;
-    gap: 10px;
-    justify-content: center;
+    gap: 10px;  
+    justify-content: flex-start;
 }
 form{
     display: flex;
@@ -20,12 +16,17 @@ form{
 .first{
     text-align: center;
     color:black;
-    text-decoration: underline wavy;
-    text-decoration-color: red;
+    font-size: 1rem;
+    font-family: "Shizuru";
+    transition: font-size 1s;
+}
+.first:hover{
+    font-size: 2rem;
 }
 .second{
     text-align: center;
-    color:black;
+    color:green !important;
+    font-family: "Rampart One";
 }
 .third{
     display: grid;
@@ -36,33 +37,60 @@ form{
     gap: 5px;
 }
 .table_elements{
-    background-color: blue;
+    /* background-color: blue; */
     text-align: center;
     font-size: 2rem;
     width: 100px;
     height: 40px;
 }
 .correct_table_elements{
-    background-color: green;
+    /* background-color: green; */
     text-align: center;
     font-size: 2rem;
     width: 100px;
     height: 40px;
+    border: 2px solid green;
+    border-radius: 10%;
 }
 .wrong_table_elements{
-    background-color: red;
+    /* background-color: red; */
     text-align: center;
     font-size: 2rem;
     width: 100px;
     height: 40px;
+    border: 2px solid red;
+    border-radius: 10%;
 }
 input[type="number"]{
     font-size: 30px;
     width: min-content;
-    color:black;
-    background-color :saddlebrown;
+    background-color: inherit;
     text-align: center;
+    border: none;
 }
-.fifth{
+.third > :nth-child(9n+3), .third>:nth-child(9n+6){
+    border-right: 5px solid black;
+}
+.third > :nth-child(n+19):nth-child(-n+27){
+    border-bottom: 5px solid black;
+}.third > :nth-child(n+46):nth-child(-n+54){
+    border-bottom: 5px solid black;
+}
+#puzzle{
+    /* background-color: linear-gradient(45ged,orange,green); */
+    color:red;
+}
+#check{
+    width: 100px;
+    height: 50px;
     margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: transparent;
+}
+#check:hover{
+    transform: scale(1.2,1.2);
+}
+footer{
+    margin-top: 80px;
 }
