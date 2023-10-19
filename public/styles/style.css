@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(45deg,rgb(14, 83, 88),rgba(249, 76, 16,0.5));
+    background-image: linear-gradient(145deg,rgba(14, 157, 167, 0.603),rgba(171, 5, 144, 0.51));
     /* transform: skewX(20deg); */
     display: flex;
     flex-flow:column nowrap;
